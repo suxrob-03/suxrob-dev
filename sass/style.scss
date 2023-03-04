@@ -835,6 +835,39 @@
 
 }
 
+@media screen and (max-width:1648px) {
+    .container {
+        main {
+            section {
+                &:nth-of-type(5) {
+                    .section_row_2{
+                        padding: 50px 4%;
+                        .cards{
+                            width: 380px;
+
+                            .cards_info{
+                                width: 100%;
+                                a{
+                                    font-size: 16px;
+                                }
+                            }
+
+                            
+                        }
+                    }
+                }
+
+
+
+
+            }
+
+        }
+    }
+
+}
+
+
 
 @media screen and (max-width:1600px) {
     .container {
@@ -1060,10 +1093,6 @@
                             width: 100%;
                             height: 50%;
                             border-radius: 0 0 33px 33px;
-
-                            label {
-                                text-align: center;
-                            }
 
                             input {
                                 width: 100%;
@@ -1303,7 +1332,7 @@
     }
 }
 
-@media screen and (max-width:780px) {
+@media screen and (max-width:782px) {
     .container {
         main {
             section {
@@ -1312,7 +1341,7 @@
                         padding: 50px 2%;
                         .cards{
                             width: 300px;
-                            height: 380px;
+                            height: auto;
 
                             .cards_info{
                                 height: 50%;
@@ -1425,12 +1454,12 @@
                     .section_row_2{
                         padding: 50px 6%;
                         .cards{
-                            width: 100%;
+                            width: 80%;
                             height: auto;
 
                             .cards_info{
+                                padding: 0 5%;
                                 height: 50%;
-                                padding-bottom: 0;
                                 width: 100%;
                                 a{
                                     margin: 20px 0;
@@ -1802,6 +1831,11 @@
                     }
                 }
 
+            }
+        }
+        footer{
+            p{
+                font-size: 16px;
             }
         }
     }
@@ -2230,6 +2264,11 @@
 
 
 
+            }
+        }
+        footer{
+            p{
+                font-size: 14px;
             }
         }
     }

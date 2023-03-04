@@ -911,7 +911,6 @@
         main {
             section {
                 &:nth-of-type(5) {
-                    background-color: red;
                     .section_row_2{
                         padding: 50px 2%;
                         .cards{
@@ -1304,6 +1303,40 @@
     }
 }
 
+@media screen and (max-width:780px) {
+    .container {
+        main {
+            section {
+                &:nth-of-type(5) {
+                    .section_row_2{
+                        padding: 50px 2%;
+                        .cards{
+                            width: 300px;
+                            height: 380px;
+
+                            .cards_info{
+                                height: 50%;
+                                padding-bottom: 0;
+                                width: 100%;
+                                a{
+                                    margin: 20px 0;
+                                    width: 100%;
+                                    font-size: 16px;
+                                }
+                            }
+
+                            
+                        }
+                    }
+                }
+               
+
+            }
+        }
+    }
+
+}
+
 @media screen and (max-width:680px) {
     .container {
         nav {
@@ -1377,6 +1410,40 @@
                         }
                     }
                 }
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:677px) {
+    .container {
+        main {
+            section {
+                &:nth-of-type(5) {
+                    .section_row_2{
+                        padding: 50px 6%;
+                        .cards{
+                            width: 100%;
+                            height: auto;
+
+                            .cards_info{
+                                height: 50%;
+                                padding-bottom: 0;
+                                width: 100%;
+                                a{
+                                    margin: 20px 0;
+                                    width: 100%;
+                                    font-size: 16px;
+                                }
+                            }
+
+                            
+                        }
+                    }
+                }
+               
 
             }
         }

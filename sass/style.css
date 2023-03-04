@@ -987,7 +987,7 @@
   }
   .container nav .menu i {
     position: relative;
-    font-size: 4rem;
+    font-size: 2rem;
     color: white;
   }
   .container nav .menu i:nth-of-type(2) {
@@ -998,6 +998,7 @@
     position: absolute;
     width: 100%;
     right: 0;
+    top: 100%;
     height: auto;
     background: rgb(70, 68, 68);
   }

@@ -878,6 +878,23 @@
                     }
 
                 }
+                &:nth-of-type(5) {
+                    .section_row_2{
+                        padding: 50px 4%;
+                        .cards{
+                            width: 380px;
+
+                            .cards_info{
+                                width: 100%;
+                                a{
+                                    font-size: 16px;
+                                }
+                            }
+
+                            
+                        }
+                    }
+                }
 
 
 
@@ -893,6 +910,24 @@
     .container {
         main {
             section {
+                &:nth-of-type(5) {
+                    background-color: red;
+                    .section_row_2{
+                        padding: 50px 2%;
+                        .cards{
+                            width: 350px;
+
+                            .cards_info{
+                                width: 100%;
+                                a{
+                                    font-size: 12px;
+                                }
+                            }
+
+                            
+                        }
+                    }
+                }
                 &:nth-of-type(6) {
                     .box {
                         .box_col_1 {
@@ -1471,6 +1506,7 @@
                     display: none;
                     position: absolute;
                     width: 100%;
+                    
                     right: 0;
                     top: 100%;
                     height: auto;

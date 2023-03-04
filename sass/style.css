@@ -658,8 +658,35 @@
     width: 500px;
     height: 500px;
   }
+  .container main section:nth-of-type(5) .section_row_2 {
+    padding: 50px 4%;
+  }
+  .container main section:nth-of-type(5) .section_row_2 .cards {
+    width: 380px;
+  }
+  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info {
+    width: 100%;
+  }
+  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info a {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 1400px) {
+  .container main section:nth-of-type(5) {
+    background-color: red;
+  }
+  .container main section:nth-of-type(5) .section_row_2 {
+    padding: 50px 2%;
+  }
+  .container main section:nth-of-type(5) .section_row_2 .cards {
+    width: 350px;
+  }
+  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info {
+    width: 100%;
+  }
+  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info a {
+    font-size: 12px;
+  }
   .container main section:nth-of-type(6) .box .box_col_1 .tel {
     font-size: 18px;
   }

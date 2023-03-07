@@ -130,6 +130,7 @@
   animation-name: anim_2;
   animation-duration: 3s;
   animation-timing-function: cubic-bezier(0, 0.82, 0.165, 0);
+  animation-iteration-count: 1;
 }
 .container main section:nth-of-type(1) .section_row_1 .section_col_1 p {
   padding-top: 40px;
@@ -172,7 +173,13 @@
   justify-content: center;
 }
 .container main section:nth-of-type(1) .section_row_1 .section_col_2 .circle img {
-  width: 200px;
+  width: 95%;
+  height: 95%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 40%;
+     object-position: 50% 40%;
+  border-radius: 50%;
 }
 .container main section:nth-of-type(2) {
   background: #161616;
@@ -330,9 +337,6 @@
 }
 .container main section:nth-of-type(5) {
   background: #202020;
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
 }
 .container main section:nth-of-type(5) .section_row_1 {
   padding-top: 120px;
@@ -381,39 +385,44 @@
 }
 .container main section:nth-of-type(5) .section_row_2 {
   padding: 72px 6% 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 .container main section:nth-of-type(5) .section_row_2 .cards {
-  width: 450px;
-  height: auto;
+  width: 100%;
+  height: 550px;
+  padding: 20px;
   background: #272727;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.16);
   border-radius: 18px;
 }
-.container main section:nth-of-type(5) .section_row_2 .cards img {
-  padding: 6%;
+.container main section:nth-of-type(5) .section_row_2 .cards .cards_img {
   width: 100%;
-  height: 50%;
+  height: 60%;
+  background-color: wheat;
+  border-radius: 12px 12px 0 0;
+}
+.container main section:nth-of-type(5) .section_row_2 .cards .cards_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px 12px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container main section:nth-of-type(5) .section_row_2 .cards .cards_info {
-  padding: 25px 25px 32px;
+  height: 40%;
 }
 .container main section:nth-of-type(5) .section_row_2 .cards .cards_info h6 {
+  padding: 40px 0;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 32px;
   line-height: 27px;
   color: #FFFFFF;
 }
 .container main section:nth-of-type(5) .section_row_2 .cards .cards_info a {
-  display: inline-block;
-  margin-top: 24px;
-  margin-left: 136px;
   background: #13FF00;
   border-radius: 10px;
   padding: 9px 36px;
@@ -422,10 +431,11 @@
   font-style: normal;
   text-align: center;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 24px;
   color: #202020;
   border: 2px solid #13FF00;
+  float: right;
   transition: all 0.4s;
 }
 .container main section:nth-of-type(5) .section_row_2 .cards .cards_info a:hover {
@@ -636,20 +646,6 @@
     height: 1080px;
   }
 }
-@media screen and (max-width: 1648px) {
-  .container main section:nth-of-type(5) .section_row_2 {
-    padding: 50px 4%;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards {
-    width: 380px;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info {
-    width: 100%;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info a {
-    font-size: 16px;
-  }
-}
 @media screen and (max-width: 1600px) {
   .container main section:nth-of-type(1) .section_row_1 .section_col_1 h1 {
     padding-top: 250px;
@@ -672,32 +668,8 @@
     width: 500px;
     height: 500px;
   }
-  .container main section:nth-of-type(5) .section_row_2 {
-    padding: 50px 4%;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards {
-    width: 380px;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info {
-    width: 100%;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info a {
-    font-size: 16px;
-  }
 }
 @media screen and (max-width: 1400px) {
-  .container main section:nth-of-type(5) .section_row_2 {
-    padding: 50px 2%;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards {
-    width: 350px;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info {
-    width: 100%;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info a {
-    font-size: 12px;
-  }
   .container main section:nth-of-type(6) .box .box_col_1 .tel {
     font-size: 18px;
   }
@@ -727,6 +699,10 @@
   .container main section:nth-of-type(1) .section_row_1 .section_col_2 .circle {
     width: 400px;
     height: 400px;
+  }
+  .container main section:nth-of-type(5) .section_row_2 {
+    padding: 50px 4%;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 1230px) {
@@ -857,6 +833,16 @@
     width: 600px;
     height: 600px;
   }
+  .container main section:nth-of-type(5) .section_row_2 {
+    padding: 50px 4%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container main section:nth-of-type(5) .section_row_2 .cards {
+    height: 480px;
+  }
+  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info h6 {
+    font-size: 28px;
+  }
 }
 @media screen and (max-width: 840px) {
   .container main section:nth-of-type(6) .box {
@@ -911,23 +897,13 @@
     height: 600px;
   }
 }
-@media screen and (max-width: 782px) {
+@media screen and (max-width: 692px) {
   .container main section:nth-of-type(5) .section_row_2 {
-    padding: 50px 2%;
+    padding: 100px 10%;
+    grid-template-columns: 1fr;
   }
   .container main section:nth-of-type(5) .section_row_2 .cards {
-    width: 300px;
-    height: auto;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info {
-    height: 50%;
-    padding-bottom: 0;
     width: 100%;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info a {
-    margin: 20px 0;
-    width: 100%;
-    font-size: 16px;
   }
 }
 @media screen and (max-width: 680px) {
@@ -974,25 +950,6 @@
   .container main section:nth-of-type(2) .section_row_2 p {
     font-size: 16px;
     line-height: 26px;
-  }
-}
-@media screen and (max-width: 677px) {
-  .container main section:nth-of-type(5) .section_row_2 {
-    padding: 50px 6%;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards {
-    width: 80%;
-    height: auto;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info {
-    padding: 0 5%;
-    height: 50%;
-    width: 100%;
-  }
-  .container main section:nth-of-type(5) .section_row_2 .cards .cards_info a {
-    margin: 20px 0;
-    width: 100%;
-    font-size: 16px;
   }
 }
 @media screen and (max-width: 600px) {
